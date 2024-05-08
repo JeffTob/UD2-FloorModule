@@ -1,0 +1,299 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    margin: 0px;
+    padding: 10px;
+    background: #f4f4f4;
+    width: 10.5in; /* Set body width to 9.5 inches */
+    margin: auto; /* Center the body horizontally */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Optional: adds shadow for better visibility */
+    margin-top: 20px;
+}
+
+.container {
+    padding: 5px; /* Add padding inside the container */
+    overflow: hidden;
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+}
+
+.property {
+    background: white;
+    margin: 20px 0;
+    padding: 5px; /* Updated padding for consistency */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.property-header h2 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.floor-counter {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background: #ddd;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+button:hover {
+    background-color: #f4f4f4;
+}
+
+.frame {
+    border: 1px solid #ccc;
+    padding: 5px; /* Updated padding for consistency */
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+#rooms, #sketch {
+    width: 48%;
+    float: left;
+    height: 300px; /* Adjust height as needed */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Optional: adds shadow for better visibility */
+}
+
+#rooms {
+    margin-right: 1%; /* Add margin to create gap between rooms and sketch */
+}
+
+#images {
+    clear: both;
+    width: auto;
+    height: 200px; /* Adjust height as needed */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Optional: adds shadow for better visibility */
+}
+
+.image-upload input, .image-upload button {
+    display: block;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    #rooms, #sketch {
+        width: 100%;
+        float: none;
+        margin-right: 0; /* Remove margin for mobile view */
+    }
+
+    #images {
+        width: 100%;
+        float: none;
+    }
+
+    .property-header h2 {
+        flex-direction: column;
+    }
+}
+.frame#rooms {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+.frame#rooms h3, .frame#rooms h4 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.frame#rooms .category {
+    margin-bottom: 15px;
+}
+
+.frame#rooms label {
+    display: block;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.frame#rooms input[type="text"] {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.frame#rooms {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px 0;
+    background-color: #fff;
+    height: 300px; /* Set a fixed height to enable scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.frame#rooms h3, .frame#rooms h4 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.frame#rooms .category {
+    margin-bottom: 15px;
+}
+
+.frame#rooms label {
+    display: block;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.frame#rooms input[type="text"] {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/*.frame#sketch {
+    position: relative; /* Ensures the positioning context */
+/*    height: 350px; /* Adjust height as needed */
+/*    overflow: hidden; /* Hide any overflow */
+/*}*/
+
+.frame#sketch {
+    width: 100%; /* Adjust based on layout needs */
+    height: 350px; /* Fixed height */
+    position: relative;
+    overflow: hidden;
+}
+
+/*
+.frame#sketch img {
+    width: 100%; /* Make the image fill the frame width */
+/*    height: 100%; /* Make the image fill the frame height */
+/*    object-fit: cover; /* Ensure the image covers the frame while maintaining aspect ratio */
+/*    display: block; /* Override the initial 'none' display */
+/*}
+
+/* style.css */
+.frame {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px 0;
+    background-color: #fff;
+    overflow: hidden; /* Added for all frames to handle overflow */
+}
+
+.frame#rooms, .frame#sketch {
+    width: 48%;
+    float: left;
+    height: 350px; /* Ensure consistency in height */
+}
+
+/*.frame#sketch img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}*/
+
+.frame#sketch img {
+    display: block; /* Ensures the image is not inline */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.frame#rooms {
+    overflow-y: auto; /* Specific overflow handling for 'rooms' */
+}
+
+#images {
+    clear: both;
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+}
+
+.image-upload input, .image-upload button {
+    display: block;
+    margin-top: 10px;
+}
+
+.title-bar {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 5px 10px; /* Padding for better visual spacing */
+    font-size: 16px; /* Suitable font size for title text */
+    font-weight: bold; /* Make the title text bold */
+    border-bottom: 1px solid #ccc; /* A subtle separator from the content */
+}
+
+.floor-title {
+    background-color: black; /* Light gray background */
+    color: white;           /* Set the text color to white */
+    padding: 5px 10px;      /* Add some padding for visual spacing */
+    font-size: 16px;        /* Set a suitable font size for the title */
+    text-align: left;     /* Center-align the text */
+    font-weight: bold;      /* Make the text bold */
+    margin-bottom: 10px;    /* Add a margin for spacing below the bar */
+}
+
+@media (max-width: 600px) {
+    #rooms, #sketch {
+        width: 100%;
+        float: none;
+    }
+
+    #images {
+        width: 100%;
+        float: none;
+    }
+}
+.image-gallery {
+    width: 100%;
+    overflow: hidden; /* Hide overflow outside the gallery frame */
+}
+
+.image-scroll-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 10px 0;
+    white-space: nowrap; /* Ensure images stay in a single row */
+}
+
+.image-container {
+    width: 100px; /* Adjusted width for each image */
+    height: 150px; /* Adjusted total height for each image and caption */
+    margin-right: 10px; /* Gap between images */
+    position: relative; /* For positioning the caption input */
+    display: inline-block; /* Display images inline */
+    vertical-align: top; /* Align images and captions properly */
+}
+
+.image-container img {
+    width: 100%; /* Full width of the container */
+    height: 120px; /* Height adjusted to allow space for caption */
+    object-fit: cover; /* Cover the frame area without distorting aspect ratio */
+}
+
+.image-container input {
+    display: block; /* Make sure input is a block to fill the width */
+    width: 100%; /* Match the width of the image above */
+    border: none;
+    border-top: 1px solid #ccc; /* Separator from the image */
+    padding: 2px 5px; /* Smaller padding for better fit */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
