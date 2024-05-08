@@ -5,7 +5,7 @@ body {
     margin: 0px;
     padding: 10px;
     background: #f4f4f4;
-    width: 10.5in; /* Set body width to 9.5 inches */
+    width: 12.5in; /* Set body width to 9.5 inches */
     margin: auto; /* Center the body horizontally */
     box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Optional: adds shadow for better visibility */
     margin-top: 20px;
@@ -16,14 +16,14 @@ body {
     overflow: hidden;
 }
 
-header h1 {
+header h2 {
     text-align: center;
     color: #333;
 }
 
 .property {
-    background: white;
-    margin: 20px 0;
+    background: rgb(220, 218, 252);
+    margin: 5px 0;
     padding: 5px; /* Updated padding for consistency */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -36,15 +36,15 @@ header h1 {
 }
 
 .floor-counter {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     border-radius: 50%;
     background: #ddd;
     display: inline-block;
     text-align: center;
     margin: 0 10px;
-    font-size: 16px;
+    font-size: 20px;
     color: #333;
     font-weight: bold;
 }
@@ -77,10 +77,11 @@ button:hover {
 }
 
 #rooms {
-    margin-right: 1%; /* Add margin to create gap between rooms and sketch */
+    margin-right: 5%; /* Add margin to create gap between rooms and sketch */
 }
 
 #images {
+    
     clear: both;
     width: auto;
     height: 200px; /* Adjust height as needed */
@@ -108,12 +109,7 @@ button:hover {
         flex-direction: column;
     }
 }
-.frame#rooms {
-    border: 1px solid #ccc;
-    padding: 5px;
-    margin: 10px 0;
-    background-color: #fff;
-}
+
 
 .frame#rooms h3, .frame#rooms h4 {
     margin: 10px 0;
@@ -130,17 +126,12 @@ button:hover {
     font-weight: bold;
 }
 
-.frame#rooms input[type="text"] {
-    width: 95%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
+
 .frame#rooms {
     border: 1px solid #ccc;
     padding: 5px;
     margin: 10px 0;
+    margin-right: 10px;
     background-color: #fff;
     height: 300px; /* Set a fixed height to enable scrolling */
     overflow-y: auto; /* Enable vertical scrolling */
@@ -161,33 +152,38 @@ button:hover {
     font-weight: bold;
 }
 
-.frame#rooms input[type="text"] {
+/*.frame#rooms input[type="text"] {
     width: 95%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-/*.frame#sketch {
-    position: relative; /* Ensures the positioning context */
-/*    height: 350px; /* Adjust height as needed */
-/*    overflow: hidden; /* Hide any overflow */
-/*}*/
+}*/
 
 .frame#sketch {
     width: 100%; /* Adjust based on layout needs */
-    height: 350px; /* Fixed height */
+    height: 300px; /* Fixed height */
     position: relative;
     overflow: hidden;
+    padding: 10px; /* Padding around the inner content */
 }
 
-/*
-.frame#sketch img {
-    width: 100%; /* Make the image fill the frame width */
-/*    height: 100%; /* Make the image fill the frame height */
-/*    object-fit: cover; /* Ensure the image covers the frame while maintaining aspect ratio */
-/*    display: block; /* Override the initial 'none' display */
-/*}
+.frame#sketch .image-upload {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.frame#sketch .image-frame {
+    border: 1px solid #ccc; /* Style for the inner frame border */
+    height: 80%; /* Adjust height as needed */
+    margin: auto; /* Center the frame if necessary */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow to maintain clean edges */
+}
+
 
 /* style.css */
 .frame {
@@ -204,28 +200,15 @@ button:hover {
     height: 350px; /* Ensure consistency in height */
 }
 
-/*.frame#sketch img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}*/
-
 .frame#sketch img {
-    display: block; /* Ensures the image is not inline */
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Full height of the container */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: none; /* Start with the image not displayed */
+    width: 100%; /* Image should fill the inner frame completely */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the frame while maintaining aspect ratio */
 }
 
 .frame#rooms {
     overflow-y: auto; /* Specific overflow handling for 'rooms' */
-}
-
-#images {
-    clear: both;
-    width: 100%;
-    height: 200px; /* Adjust height as needed */
 }
 
 .image-upload input, .image-upload button {
@@ -296,4 +279,41 @@ button:hover {
     border-top: 1px solid #ccc; /* Separator from the image */
     padding: 2px 5px; /* Smaller padding for better fit */
     box-sizing: border-box; /* Include padding in width calculation */
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 2in);   
+    /*grid-template-columns: repeat(2, 3.66in);*/ /*original from specs*/
+    
+    /*grid-column-gap: 0.17in;  /*original from specs*/
+    grid-column-gap: 0.0.10in;
+    
+}
+.column-content {
+    font-size: 10pt;      
+}
+
+.frame#kitchen {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+.frame#kitchen .kitchen label {
+    display: inline-block; /* Change from block to inline-block */
+    margin: 5px 10px 5px 0; /* Adjusted margins for side-by-side layout */
+    white-space: nowrap; /* Prevents breaking the label into multiple lines */
+}
+
+.frame#kitchen .kitchen input[type='checkbox'] {
+    margin-right: 5px; /* Space between checkbox and label text */
+}
+
+.frame#kitchen .kitchen input[type='text'] {
+    width: 100%; /* Adjust width to fill line if needed */
+    padding: 8px;
+    margin-top: 10px; /* More space above the text input */
+    border: 1px solid #ccc;
+    display: block; /* Ensure the text input appears on a new line */
 }
